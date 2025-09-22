@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-09-22T22:41:45.082315" rpa="false" schemaversion="5">
+<suite id="s1" name="Test-Calculate" source="C:\Users\Admin\Documents\GitHub\simple-api-robot\test-calculate.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2025-09-22T22:41:45.157671" level="INFO">Creating Session using : alias=api, url=http://vm3.local, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${SESSION}</arg>
+<arg>${BASE}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-09-22T22:41:45.157671" elapsed="0.000000"/>
+</kw>
+<test id="s1-t1" name="GET /getcode returns expected teacher code" line="16">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Should Getcode Equal Expect">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:45.159694" level="FAIL">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/getcode</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:45.159190" elapsed="0.002010">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:45.161200" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:45.161200" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>code</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:45.161200" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['code']}</arg>
+<arg>${EXPECT_CODE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:45.161200" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:45.158676" elapsed="0.002524">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Getcode Equal Expect">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:47.163547" level="FAIL">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/getcode</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:47.162017" elapsed="0.003066">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:47.165083" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:47.165083" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>code</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:47.165083" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['code']}</arg>
+<arg>${EXPECT_CODE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:47.165083" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:47.162017" elapsed="0.003066">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Getcode Equal Expect">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:49.166976" level="FAIL">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/getcode</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:49.165439" elapsed="0.003064">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:49.168503" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:49.170041" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>code</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:49.170041" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['code']}</arg>
+<arg>${EXPECT_CODE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:49.170041" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:49.165439" elapsed="0.004602">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Getcode Equal Expect">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:51.170656" level="FAIL">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/getcode</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.170656" elapsed="0.001534">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.172190" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.172190" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>code</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.172190" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['code']}</arg>
+<arg>${EXPECT_CODE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.172190" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:51.170145" elapsed="0.002045">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<msg time="2025-09-22T22:41:51.172190" level="FAIL">Keyword 'Should Getcode Equal Expect' failed after retrying for 5 seconds. The last error was: MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<arg>${RETRY_TIMES}</arg>
+<arg>${RETRY_WAIT}</arg>
+<arg>Should Getcode Equal Expect</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2025-09-22T22:41:45.158676" elapsed="6.013514">Keyword 'Should Getcode Equal Expect' failed after retrying for 5 seconds. The last error was: MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Log Response If Any">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.173713" level="FAIL">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</msg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.173713" elapsed="0.000000">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.173713" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.175233" level="FAIL">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</msg>
+<arg>Body: ${resp.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.175233" elapsed="0.000000">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Body: ${resp.text}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.173713" elapsed="0.001520"/>
+</kw>
+<status status="PASS" start="2025-09-22T22:41:51.173713" elapsed="0.001520"/>
+</kw>
+<arg>Log Response If Any</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.172190" elapsed="0.003043"/>
+</kw>
+<doc>ตรวจว่า /getcode ส่ง 200 และได้ code ตามที่ผู้สอนกำหนด</doc>
+<status status="FAIL" start="2025-09-22T22:41:45.157671" elapsed="6.017562">Keyword 'Should Getcode Equal Expect' failed after retrying for 5 seconds. The last error was: MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</test>
+<test id="s1-t2" name="GET /plus sums integers correctly" line="20">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.176755" level="INFO">${P} = {'a': '5', 'b': '7'}</msg>
+<var>${P}</var>
+<arg>a=5</arg>
+<arg>b=7</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.176755" elapsed="0.000000"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:51.176755" level="FAIL">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/plus</arg>
+<arg>params=${P}</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.176755" elapsed="0.000000">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.176755" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.176755" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['a']}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.176755" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['b']}</arg>
+<arg>7</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.178270" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['sum']}</arg>
+<arg>12</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.178270" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Log Response If Any">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.179290" level="FAIL">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</msg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.178780" elapsed="0.000510">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.178780" elapsed="0.000510"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.179290" level="FAIL">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</msg>
+<arg>Body: ${resp.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.179290" elapsed="0.000000">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Body: ${resp.text}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.179290" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-09-22T22:41:51.178270" elapsed="0.001020"/>
+</kw>
+<arg>Log Response If Any</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.178270" elapsed="0.001020"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:51.175233" elapsed="0.004057">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</test>
+<test id="s1-t3" name="GET /plus sums floats correctly" line="29">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.180802" level="INFO">${P} = {'a': '1.5', 'b': '2.25'}</msg>
+<var>${P}</var>
+<arg>a=1.5</arg>
+<arg>b=2.25</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.180802" elapsed="0.000000"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:51.180802" level="FAIL">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/plus</arg>
+<arg>params=${P}</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.180802" elapsed="0.000000">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.180802" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.180802" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['a']}</arg>
+<arg>1.5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.182348" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['b']}</arg>
+<arg>2.25</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.182348" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['sum']}</arg>
+<arg>3.75</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.182348" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Log Response If Any">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.183871" level="FAIL">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</msg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.183871" elapsed="0.000000">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.183871" elapsed="0.001516"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.185387" level="FAIL">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</msg>
+<arg>Body: ${resp.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.185387" elapsed="0.000000">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Body: ${resp.text}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.185387" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-09-22T22:41:51.183871" elapsed="0.001516"/>
+</kw>
+<arg>Log Response If Any</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.182348" elapsed="0.004553"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:51.179290" elapsed="0.007611">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</test>
+<test id="s1-t4" name="GET /plus defaults to zero when params missing" line="38">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:51.188416" level="FAIL">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/plus</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.186901" elapsed="0.001515">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>200</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.188416" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.188416" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['a']}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.188416" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['b']}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.188416" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${json['sum']}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.188416" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Log Response If Any">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.189942" level="FAIL">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</msg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.189942" elapsed="0.000000">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.189942" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.191463" level="FAIL">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</msg>
+<arg>Body: ${resp.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.189942" elapsed="0.001521">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Body: ${resp.text}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.189942" elapsed="0.001521"/>
+</kw>
+<status status="PASS" start="2025-09-22T22:41:51.189942" elapsed="0.001521"/>
+</kw>
+<arg>Log Response If Any</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.189942" elapsed="0.001521"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:51.186901" elapsed="0.004562">MissingSchema: Invalid URL 'api': No scheme supplied. Perhaps you meant https://api?</status>
+</test>
+<test id="s1-t5" name="GET /plus returns 400 for invalid param" line="46">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.191463" level="INFO">${P} = {'a': 'xyz', 'b': '1'}</msg>
+<var>${P}</var>
+<arg>a=xyz</arg>
+<arg>b=1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.191463" elapsed="0.000000"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-09-22T22:41:51.191463" level="FAIL">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</msg>
+<var>${resp}</var>
+<arg>${SESSION}</arg>
+<arg>/plus</arg>
+<arg>params=${P}</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.191463" elapsed="0.001536">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</kw>
+<kw name="Should Be Status">
+<arg>${resp}</arg>
+<arg>400</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.192999" elapsed="0.000000"/>
+</kw>
+<kw name="To JSON">
+<var>${json}</var>
+<arg>${resp}</arg>
+<status status="NOT RUN" start="2025-09-22T22:41:51.192999" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json}</arg>
+<arg>error</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-09-22T22:41:51.192999" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Log Response If Any">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.192999" level="FAIL">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</msg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.192999" elapsed="0.000000">Resolving variable '${resp.status_code}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Status: ${resp.status_code}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.192999" elapsed="0.001512"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T22:41:51.194511" level="FAIL">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</msg>
+<arg>Body: ${resp.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-09-22T22:41:51.194511" elapsed="0.000000">Resolving variable '${resp.text}' failed: Variable '${resp}' not found.</status>
+</kw>
+<arg>Log</arg>
+<arg>Body: ${resp.text}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.194511" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-09-22T22:41:51.192999" elapsed="0.001512"/>
+</kw>
+<arg>Log Response If Any</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-09-22T22:41:51.192999" elapsed="0.001512"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:51.191463" elapsed="0.003048">TypeError: RequestsKeywords.session_less_get() got multiple values for argument 'params'</status>
+</test>
+<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
+<msg time="2025-09-22T22:41:51.196027" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2025-09-22T22:41:51.196027" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-22T22:41:45.083838" elapsed="6.112189"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test-Calculate" id="s1" pass="0" fail="5" skip="0">Test-Calculate</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-09-22T22:41:45.080804" level="WARN">Error in file 'C:\Users\Admin\Documents\GitHub\simple-api-robot\test-calculate.robot' on line 68: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
