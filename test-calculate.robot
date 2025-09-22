@@ -26,7 +26,7 @@ Getcode matches
     ${resp}=    GET On Session    ${SESSION}    /getcode
     Should Be Equal As Integers    ${resp.status_code}    200
     ${json}=    Evaluate    $resp.json()
-    Should Be Equal    ${json['code']}  SUCCESS
+    Should Be Equal    ${json['code']}  success
 
 GET /plus/5/7 sums correctly 
 
