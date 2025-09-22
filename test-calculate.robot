@@ -9,7 +9,7 @@ ${SESSION}        api
 
 Get Calculation JSON
     [Arguments]    ${num1}    ${num2}
-    ${resp}=     GET    http://127.0.0.1:5000/calculate/${num1}/${num2}
+    ${resp}=     GET    http://127.0.0.1:5000/plus/${num1}/${num2}
 
     # Verify the status code is 200 (OK)
     Should Be Equal    ${resp.status_code}    ${200}
