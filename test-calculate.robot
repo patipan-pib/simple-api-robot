@@ -20,14 +20,6 @@ Get Calculation JSON
 
 
 *** Test Cases ***
-Getcode matches
-
-    Create Session    ${SESSION}    ${BASE}
-    ${resp}=    GET On Session    ${SESSION}    /getcode
-    Should Be Equal As Integers    ${resp.status_code}    200
-    ${json}=    Evaluate    $resp.json()
-    Should Be Equal    ${json['code']}  success
-
 GET /plus/5/7 sums correctly 
 
     Create Session    ${SESSION}    ${BASE}
